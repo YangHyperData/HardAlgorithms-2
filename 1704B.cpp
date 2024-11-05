@@ -1,6 +1,5 @@
-
 /* YangStone Come To Play */
-#include <cstdio>
+
 #include <vector>
 #include <bits/stdc++.h>
 #include <conio.h>
@@ -16,7 +15,10 @@ using namespace std;
 #define ll long long
 #define lg long
 #define db double
-#define MOD 998244353
+#define scanv(x)      \
+	for (auto &i : x) \
+	cin >> i
+// #define MOD 998244353
 #define dbg(x)         \
 	cerr << #x << " "; \
 	_print(x);         \
@@ -47,14 +49,14 @@ using namespace std;
 #define rsrt(x) sort(x.rbg, x.red)
 #define all(r) r.begin(), r.end()
 #define vi vector<int>
-const int MAXN = 4e5 + 5;
+// const int MAXN = 4e5 + 5;
 #define forn(i, n) for (int i = 0; i < int(n); ++i)
 #define rall(r) r.rbegin(), r.rend()
 #define fast_out()                    \
 	ios_base::sync_with_stdio(false); \
 	cin.tie(NULL)
-const int mod = 1e9 + 7;
-const int N = 1e5 + 10;
+// const int mod = 1e9 + 7;
+// const int N = 1e5 + 10;
 const ll INF = 1e9 + 7;
 #define FORALL(i, a) for (auto &(i) : (a))
 #define yn(f) f ? cout << "YES\n" : cout << "NO\n"
@@ -131,10 +133,6 @@ ll func(ll n)
 	}
 	return sum;
 }
-bool cmp(ll l, ll r)
-{
-	return l > r;
-}
 ll binpow(ll a, ll b)
 {
 	ll ans = 1ll;
@@ -147,30 +145,11 @@ ll binpow(ll a, ll b)
 	}
 	return ans;
 }
-
 void solve()
 {
-	long n, x;
-	cin >> n >> x;
-	long cnt(0), low(0), high(2e9 + 7);
-	for (long p = 0; p < n; p++)
-	{
-		long cur;
-		cin >> cur;
-		long left = cur - x;
-		long right = cur + x;
-		low = (low > left) ? low : left;
-		high = (high < right) ? high : right;
-		if (low > high)
-		{
-			++cnt;
-			low = left;
-			high = right;
-		}
-	}
-
-	cout << cnt << endl;
+    
 }
+
 int main()
 {
 	fast_out();
@@ -178,7 +157,6 @@ int main()
 	cin >> t;
 	wh(t--)
 	{
-
 		solve();
 		// cout << endl;
 	}
