@@ -1,6 +1,5 @@
-
 /* YangStone Come To Play */
-#include <cstdio>
+
 #include <vector>
 #include <bits/stdc++.h>
 #include <conio.h>
@@ -16,7 +15,10 @@ using namespace std;
 #define ll long long
 #define lg long
 #define db double
-#define MOD 998244353
+#define scanv(x)      \
+	for (auto &i : x) \
+	cin >> i
+// #define MOD 998244353
 #define dbg(x)         \
 	cerr << #x << " "; \
 	_print(x);         \
@@ -47,16 +49,17 @@ using namespace std;
 #define rsrt(x) sort(x.rbg, x.red)
 #define all(r) r.begin(), r.end()
 #define vi vector<int>
-const int MAXN = 4e5 + 5;
+// const int MAXN = 4e5 + 5;
 #define forn(i, n) for (int i = 0; i < int(n); ++i)
 #define rall(r) r.rbegin(), r.rend()
 #define fast_out()                    \
 	ios_base::sync_with_stdio(false); \
 	cin.tie(NULL)
-const int mod = 1e9 + 7;
-const int N = 1e5 + 10;
+// const int mod = 1e9 + 7;
+// const int N = 1e5 + 10;
 const ll INF = 1e9 + 7;
 #define FORALL(i, a) for (auto &(i) : (a))
+#define yn(f) f ? cout << "YES\n" : cout << "NO\n"
 // void file() {freopen("input.txt","r",stdin); freopen("output.txt","w",stdout);}
 int bin_pow(int a, int b, int mod) // luy thua nhi phan
 {
@@ -130,10 +133,6 @@ ll func(ll n)
 	}
 	return sum;
 }
-bool cmp(ll l, ll r)
-{
-	return l > r;
-}
 ll binpow(ll a, ll b)
 {
 	ll ans = 1ll;
@@ -150,15 +149,16 @@ ll binpow(ll a, ll b)
 void solve()
 {
 	long n;
-	scanf("%ld", &n);
+	cin >> n;
 	long a, b;
 	for (long p = 0; p < n; p++)
 	{
 		b = a;
-		scanf("%ld", &a);
+		cin >> a;
 	}
 	puts((n == 2 && (b - a > 1 || b - a < -1)) ? "YES" : "NO");
 }
+
 int main()
 {
 	fast_out();
@@ -166,8 +166,8 @@ int main()
 	cin >> t;
 	wh(t--)
 	{
-
 		solve();
+
 		// cout << endl;
 	}
 
