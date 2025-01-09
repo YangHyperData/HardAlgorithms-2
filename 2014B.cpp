@@ -1,6 +1,5 @@
-
 /* YangStone Come To Play */
-#include <cstdio>
+
 #include <vector>
 #include <bits/stdc++.h>
 #include <conio.h>
@@ -16,6 +15,9 @@ using namespace std;
 #define ll long long
 #define lg long
 #define db double
+#define scanv(x)      \
+	for (auto &i : x) \
+	cin >> i
 // #define MOD 998244353
 #define dbg(x)         \
 	cerr << #x << " "; \
@@ -47,7 +49,7 @@ using namespace std;
 #define rsrt(x) sort(x.rbg, x.red)
 #define all(r) r.begin(), r.end()
 #define vi vector<int>
-const int MAXN = 4e5 + 5;
+// const int MAXN = 4e5 + 5;
 #define forn(i, n) for (int i = 0; i < int(n); ++i)
 #define rall(r) r.rbegin(), r.rend()
 #define fast_out()                    \
@@ -151,6 +153,7 @@ void solve()
 
 	cout << (((n + 1) * n / 2 - (n - k) * (n - k + 1) / 2) % 2 ? "NO" : "YES") << endl;
 }
+
 int main()
 {
 	fast_out();
@@ -159,7 +162,7 @@ int main()
 	wh(t--)
 	{
 		solve();
-		//cout << endl;
+		// cout << endl;
 	}
 
 	return 0;
