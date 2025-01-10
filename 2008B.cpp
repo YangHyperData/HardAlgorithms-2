@@ -1,4 +1,3 @@
-
 /* YangStone Come To Play */
 #include <cstdio>
 #include <vector>
